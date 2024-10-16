@@ -12,7 +12,7 @@ Route::get('/', function () {
     return view('dashboard.index');
 });
 
-Route::get('doctor', [DoctorController::class, 'index'])->middleware(Abc::class);
+Route::get('doctor', [DoctorController::class, 'index']);
 
 Route::get('doctor/create', [DoctorController::class, 'create']);
 Route::post('doctor/create', [DoctorController::class, 'store']);
